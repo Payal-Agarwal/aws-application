@@ -4,7 +4,8 @@ application = Flask(__name__)
 
 @application.route("/")
 def home():
-   return "Testing : CI/CD is working successfully!"
+    return "CI/CD working successfully on AWS Elastic Beanstalk!"
 
+# IMPORTANT for AWS
 if __name__ == "__main__":
-    application.run()
+    application.run(host="0.0.0.0", port=8000)
